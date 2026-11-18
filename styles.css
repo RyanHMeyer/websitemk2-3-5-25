@@ -1,0 +1,137 @@
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+html {
+  height: 100vh;
+  width: 100vw;
+  background: #40534C;/*linear-gradient(#40534C, #677D6A,#40534C);*/
+}
+body {
+  /*background-color: #1E5128;*/
+	font-family: "Courier New", monospace;
+}
+#backofones { 
+  font-family: monospace;
+  font-size: 6vw;
+  position: fixed; /*change this to absolute if you dont want it to scroll with you*/
+  top: 0; 
+  left: 0; 
+  bottom: 0; 
+  max-width: 100%;
+  max-height: 100%;
+  overflow-wrap: break-word;
+  overflow: hidden;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: -1;
+}
+header {
+  width: 100%;
+  margin-left: -8px;
+  /*margin-right: -4rem;*/
+  padding-right: 10px;
+  height: 150px;
+  background-color: #1A3636;/*rgb(38, 38, 38);*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  border-bottom-style: solid;
+  border-color: #d6bd98;
+}
+nav {
+  list-style-type: none;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+nav > ul > li {
+	display: inline-block;
+	padding: .5vw .5vw 0;
+}
+a {
+	color: #D6BD98;
+	font-size: 2vw;
+	font-weight: bold;
+}
+a:hover {
+	color: #d9d9d9;
+}
+.name {
+  color: #d9d9d9;
+  padding-right: 0.7vw;
+}
+#filled-with {
+	margin: 15rem 27vw 10rem 27vw;
+	font-size: 4vw;
+	text-align: center;
+	background-color: #677D6A;
+	color: white;
+}
+section {
+	background-color: #1a3636;
+	padding: 1rem 2rem 1rem 2rem;
+	color: #d6bd98;
+}
+/*p {
+	font-size: 1.6vw;
+}*/
+#info {
+	padding: 1rem 2rem 6vw 2rem;
+}
+#imageofme {
+	/*max-width: 300px;
+	margin-top: -2rem;
+	width: 30vw;
+	height: 5vw;*/
+	max-height: 500px;
+	height: 25vw;
+	float: right;
+	padding: 0rem 2rem 0rem 2rem;
+}
+.info-desc {
+	font-size: 1.32rem;
+}
+#contact-desc {
+	line-height: 2.9vw;
+	color: #D6BD98;
+	font-size: 2vw;
+	font-weight: bold;
+}
+#experience {
+	margin-top: 25vh;
+}
+#educat {
+	margin-top: 25vh;
+}
+@media only screen and (max-width: 600px) {
+	.name {
+		font-size: 3.7vw;
+	}
+	#filled-with {
+		font-size: 9vw;
+		margin: 15rem 10vw 10rem 10vw;
+	}
+	header {
+		height: 100px;
+	}
+	a {
+		font-size: 3.01vw;
+	}
+	nav > ul > li {
+	display: inline-block;
+	padding: .5vw .5vw 0;
+	
+	}
+	#imageofme {
+		max-width: 150px;
+		max-height: 900px;
+	}
+}
