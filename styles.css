@@ -156,7 +156,14 @@ html.dark #filled-with {
 	color: #D6BD98;
 }
 html.dark section {
-	outline: 1px solid #40534C;
+	border: 1px solid #40534C;
+}
+/* Sections that touch (Info and Contact on index.html) look like one box: no line where they meet */
+html.dark section + section {
+	border-top: none;
+}
+html.dark section:has(+ section) {
+	border-bottom: none;
 }
 /* ---------- Phones (screens 600px wide or less) ---------- */
 /* Sizes here use rem (based on the phone's normal text size) instead of vw, so text never shrinks below readable */
