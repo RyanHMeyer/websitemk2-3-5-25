@@ -81,10 +81,13 @@ fetch("header.html")
   const phoneDigits = decode("KDYxMCkgMzA0LTMyMjQ=");
 
   const emailLink = document.getElementById("email-link");
+  const phoneLink = document.getElementById("phone-link");
+  if (!emailLink || !phoneLink) {//only the Info page has the contact links, so stop here on other pages
+    return;
+  }
   emailLink.href = `mailto:${email}`;
   emailLink.textContent = email;
 
-  const phoneLink = document.getElementById("phone-link");
   phoneLink.href = `tel:+1${phoneDigits}`;
   phoneLink.textContent = phoneDigits.replace(/(\d{3})(\d{3})(\d{4})/, "$1-$2-$3");
 })();
