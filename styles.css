@@ -111,6 +111,53 @@ section {
 #educat {
 	margin-top: 25vh;
 }
+/* ---------- Dark Mode ---------- */
+/* Lightbulb switch, pinned to the bottom-left corner (fixed, so it stays in the corner while scrolling) */
+#theme-toggle {
+	position: fixed;
+	left: 1rem;
+	bottom: 1rem;
+	z-index: 10;
+	width: 48px;
+	height: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	border-radius: 50%;
+	border: 2px solid #D6BD98;
+	background-color: #1A3636;
+	color: #D6BD98;
+	cursor: pointer;
+}
+#theme-toggle:hover {
+	color: #d9d9d9;
+	border-color: #d9d9d9;
+}
+/* Light mode: bulb is lit (filled). Dark mode: bulb is off (outline only) */
+#theme-toggle .bulb-glass {
+	fill: currentColor;
+}
+html.dark #theme-toggle .bulb-glass {
+	fill: none;
+}
+/* Dark colors: palette colors, plus #0F1F1F (a deeper shade of #1A3636) for the page background */
+html, #backofones, #filled-with {
+	transition: background-color 0.3s, color 0.3s;
+}
+html.dark {
+	background: #0F1F1F;
+}
+html.dark #backofones {
+	color: #1A3636;
+}
+html.dark #filled-with {
+	background-color: #40534C;
+	color: #D6BD98;
+}
+html.dark section {
+	outline: 1px solid #40534C;
+}
 @media only screen and (max-width: 600px) {
 	.name {
 		font-size: 3.7vw;
